@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Biblioteca</title>
+    <link rel="stylesheet" href="{{ asset('css/app.css') }}">
+    <script src="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/alertify.min.js"></script>
+    <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/alertifyjs@1.13.1/build/css/alertify.min.css"/>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="{{ route('principal') }}">Biblioteca</a>
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item"><a class="nav-link" href="{{ route('registro') }}">Registro de Libro</a></li>
+        </ul>
+    </nav>
+    
+    <div class="container mt-4">
+        @yield('content')
+    </div>
+    
+    <footer class="text-center mt-5">
+        <p>&copy; Biblioteca, {{ date('Y') }}</p>
+    </footer>
+</body>
+</html>
